@@ -1,0 +1,36 @@
+{
+  "name": "discordjsbot-commands",
+  "version": "4.0.0",
+  "description": "A package to make discord.js commands easily.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "name": "discordjsbot-commands",
+    "fetchSpec": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tec-wizard/discordjsbot-commands"
+  },
+  "keywords": [
+    "discord-commands",
+    "memes",
+    "images",
+    "jokes",
+    "advice",
+    "discord",
+    "neko",
+    "facts"
+  ],
+  "author": "tec-wizard",
+  "license": "MIT",
+  "homepage": "https://github.com/tec-wizard/discordjsbot-commands#readme",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "events": "^3.2.0"
+  }
+}
