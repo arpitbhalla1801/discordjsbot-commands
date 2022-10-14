@@ -1,8 +1,8 @@
-### discordjsbot-commands
+# discordjsbot-commands
 lets be honest, every 6 out of 9 person on discord wants a custom made bot these days. and why shouldnt they, why pay for premium bots when you can just make your own custom ones? :)
 
 
-# EXAMPLE
+## EXAMPLE
 ```js
 const discord = require("discord.js");
 const client = new discord.Client();
@@ -24,7 +24,7 @@ client.on("message", async(message) => {
 The documentation for the package can be [found here](https://tec-wizard.gitbook.io/discordjsbot-commands).
 
 
-### Got any issues with the package ? (you shouldnt really but if you do)
+## Got any issues with the package ? (you shouldnt really but if you do)
 Feel free to create an issue on the [project's Github](https://github.com/tec-wizard/discordjsbot-commands/issues).
 
 
