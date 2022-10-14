@@ -25,7 +25,7 @@ The documentation for the package can be [found here](https://tec-wizard.gitbook
 
 
 ### Got any issues with the package ? (you shouldnt really but if you do)
-Feel free to create an issue on the [project's Github](https://github.com/tec-wizard/discordjsbot-commands).
+Feel free to create an issue on the [project's Github](https://github.com/tec-wizard/discordjsbot-commands/issues).
 
 
 __hope to update this package frequently... so make sure to come back... pwease UwU ;)__
