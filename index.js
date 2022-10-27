@@ -1,3 +1,4 @@
 module.exports = {
-  Commands: require("./src/commands.js"),
+  Fun: require("./src/fun.js"),
+  Image: require("./src/image.js")
 };
