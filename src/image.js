@@ -166,6 +166,25 @@ class Image {
     let syntax = { embeds: [embed] };
     return syntax;
   }
+  static async neko() {
+    const main = await axios.get("https://neko-love.xyz/api/v1/neko");
+    const data = await main.data;
+
+    if (data.code !== 200) {
+      return console.log("couldnt access the API");
+    }
+
+    let embed = {
+      color: 0xffc0cb,
+      image: {
+        url: `${data.url}`,
+      },
+    };
+
+    let syntax = { embeds: [embed] };
+
+    return syntax;
+  }
   static async pat() {
     const main = await axios.get("https://some-random-api.ml/animu/pat");
     const data = main.data;

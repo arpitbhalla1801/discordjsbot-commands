@@ -65,26 +65,6 @@ class Fun {
     return syntax;
   }
 
-  static async neko() {
-    const main = await axios.get("https://neko-love.xyz/api/v1/neko");
-    const data = await main.data;
-
-    if (data.code !== 200) {
-      return console.log("couldnt access the API");
-    }
-
-    let embed = {
-      color: 0xffc0cb,
-      image: {
-        url: `${data.url}`,
-      },
-    };
-
-    let syntax = { embeds: [embed] };
-
-    return syntax;
-  }
-
   static async quote() {
     const main = await axios.get(
       "https://goquotes-api.herokuapp.com/api/v1/random?count=1"
@@ -302,7 +282,7 @@ class Fun {
     return syntax;
   }
 
-  static async startup() {
+  static async startupidea() {
     const main = await axios.get(`https://itsthisforthat.com/api.php?json`);
     const data = main.data;
 
@@ -356,22 +336,22 @@ class Fun {
     return syntax;
   }
 
-  static async ytsr(query) {
-    const main = await axios.get(`https://normal-api.tk/youtube/searchvideo?query=${encodeURIComponent(query)}`);
-    const data = main.data;
+  // static async ytsr(query) {
+  //   const main = await axios.get(`https://normal-api.tk/youtube/searchvideo?query=${encodeURIComponent(query)}`);
+  //   const data = main.data;
 
-    if(!data) {
-      return console.log("couldnt access the API");
-    }
+  //   if(!data) {
+  //     return console.log("couldnt access the API");
+  //   }
 
-    let embed = {
-      title: `${data.title}`,
-      description: `${data.description}`,
-    };
+  //   let embed = {
+  //     title: `${data.title}`,
+  //     description: `${data.description}`,
+  //   };
 
-    let syntax = { embeds: [embed] };
-    return syntax;
-  }
+  //   let syntax = { embeds: [embed] };
+  //   return syntax;
+  // }
 
   static async parsems(ts) {
     const main = await axios.get(`https://normal-api.tk/parsems?ms=${ts}`)
@@ -398,26 +378,38 @@ class Fun {
   static async randomuser() {
     const main = await axios.get(`https://randomuser.me/api/`);
     const data = main.data.results[0];
-    console.log(data);
-
+  
     if(!data) {
       return console.log("couldnt access the API");
     }
 
     let embed = {
-      author: `${data.name.title} ${data.name.first} ${data.name.last}`,
-      description: `${data}`,
+      title: `${data.name.title} ${data.name.first} ${data.name.last}`,
+      thumbnail: {
+        url: `${data.picture.large}`
+      },
+      description: `${data.location.city}, ${data.location.state}, ${data.location.country}`,
       fields: [
         {
-          name: ``,
-          value: ``
+          name: `DOB | Age`,
+          value: `${data.dob.date} | ${data.dob.age}`
         },
         {
-          name: ``,
-          value: ``
+          name: 'E-mail',
+          value: `${data.email}`
         },
-      ]
+        {
+          name: 'Nationality',
+          value: `${data.nat}`
+        },
+      ],
+      footer: {
+        text: `${data.gender}`
+      }
     };
+
+    let syntax = { embeds: [embed]};
+    return syntax;
   }
 
   static async dictionary(word) {
@@ -443,9 +435,5 @@ class Fun {
     let syntax = { embeds: [embed] };
     return syntax;
   }
-
-  // static async () {
-
-  // }
 }
 module.exports = Fun;
