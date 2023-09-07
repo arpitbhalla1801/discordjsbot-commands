@@ -1,3 +1,6 @@
+[DISCONTINUED]
+
+
 # discordjsbot-commands
 lets be honest, every 6 out of 9 person on discord wants a custom made bot these days. and why shouldnt they, why pay for premium bots when you can just make your own custom ones? :)
 
